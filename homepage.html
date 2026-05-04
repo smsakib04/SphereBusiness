@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SphereBusiness - Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: radial-gradient(circle at top left, rgba(133, 196, 255, 0.35), transparent 40%),
+                        radial-gradient(circle at bottom right, rgba(255, 211, 243, 0.35), transparent 35%),
+                        linear-gradient(135deg, #edf5ff 0%, #d8eaff 50%, #ffffff 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 25px 80px rgba(24, 74, 170, 0.15);
+            max-width: 460px;
+            width: 100%;
+            border: 2px solid rgba(96, 155, 255, 0.35);
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 80px;
+            height: 80px;
+            border: 4px dotted #4b7dff;
+            border-radius: 16px;
+            opacity: 0.85;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            bottom: -25px;
+            left: -25px;
+            width: 100px;
+            height: 100px;
+            background: rgba(70, 159, 255, 0.16);
+            border-radius: 50%;
+        }
+
+        .logo-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            background: radial-gradient(circle at 30% 30%, #5f97ff, #77d4ff, #ffffff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #0b2f6b;
+            font-size: 18px;
+            box-shadow: 0 12px 30px rgba(94, 144, 255, 0.25);
+            border: 4px solid #4f83ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            color: #0f4bb7;
+            font-size: 34px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(82, 131, 255, 0.15);
+        }
+
+        .subtitle {
+            color: #5d6f9a;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            color: #1f57b1;
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 14px 16px;
+            background: #f8fbff;
+            border: 2px solid #7aa8ff;
+            border-radius: 12px;
+            color: #1d305f;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 1px 2px rgba(23, 73, 171, 0.08);
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #4a8cff;
+            box-shadow: 0 0 12px rgba(74, 138, 255, 0.25);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #4d7dff, #7fc8ff);
+            border: none;
+            border-radius: 12px;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 12px 25px rgba(78, 133, 255, 0.25);
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(78, 133, 255, 0.35);
+            background: linear-gradient(135deg, #3b6ef5, #82d1ff);
+        }
+
+        .footer-text {
+            text-align: center;
+            color: #4a6eb7;
+            font-size: 12px;
+            margin-top: 22px;
+        }
+
+        a {
+            color: #1450c7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #3f84ff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-section">
+            <div class="logo">BUSINESS</div>
+            <h1>SphereBusiness</h1>
+            <p class="subtitle">Welcome Back</p>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <div class="footer-text">
+            Don't have an account? <a href="#">Sign up here</a>
+        </div>
+    </div>
+</body>
+</html>
